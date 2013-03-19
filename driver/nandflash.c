@@ -170,8 +170,14 @@ static inline struct SNandInitInfo *AT91F_GetNandInitInfo(unsigned short chipID)
         info.uNandNbBlocks = 0x1000;
         break;
     case 0x98da:
-    info.uNandSpareSize = 0x80;   
-    break;
+        info.uNandSpareSize = 0x80;   
+        break;
+
+    case 0x98ac:
+        info.uNandSpareSize = 0x80;
+	break;
+
+    case 0x98f1;
     case 0x2cda:
     case 0x2caa:
     case 0xecda:
